@@ -31,15 +31,23 @@
             <div class="contents__item">
                 <label class="form-label">Ответы</label>
                 <div>
-                <textarea class="form-field form-textarea" placeholder="Здесь будет ответ нейросети с правильными ответами (наверное)" rows="3" id="ready" readonly></textarea>
+                <textarea class="form-field form-textarea" placeholder="Здесь будет ответ нейросети с правильными ответами (наверное)" rows="3" id="answers" readonly></textarea>
                 </div>
-                <button class="btn btn-solid-primary">Закинуть промпт нейросети</button>
+                <button class="btn btn-solid-primary" onclick="promptAnswers()">Закинуть промпт нейросети</button>
             </div>
         </div>
+    </div>
+    <div id="api_input_container">
+        <p class="form-label">Введите свой API-ключ:</p>
+        <input type="text" id="api_input" size="20">
+        <p>Ключ нужен от <a id="modelLink" href="https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free" target="_blank">этой</a> модели</p>
     </div>
     <div class="container__footer">
         <div>
             <a href="https://github.com/da-fuu" target="_blank" class="link-text link-text-secondary">Автор форка и расширений</a>
+        </div>
+        <div>
+            <a href="https://github.com/Ramz1kS" target="_blank" class="link-text link-text-secondary">(и ещё один)</a>
         </div>
         <div>
             <a href="https://github.com/siberianbearofficial" target="_blank" class="link-text link-text-secondary">Автор парсера и сайта</a>
@@ -49,28 +57,8 @@
         </div>
     </div>
 </div>
-<script>
-    const contentElement = document.getElementById('content');
-    const readyElement = document.getElementById('ready');
-
-	contentElement.addEventListener('input', parse);
-	
-	async function copyres() {
-		await navigator.clipboard.writeText(readyElement.value)
-	}
-	
-	async function pastebuf() {
-		contentElement.value = await navigator.clipboard.readText()
-		parse()
-	}
-
-    function parse() {
-        if (contentElement.value) {
-			readyElement.value = parseAll(contentElement.value);
-        } else
-            readyElement.value = 'Вы точно не забыли вставить HTML слева?';
-    }
-</script>
 <script src="parser.js"></script>
+<script type="text/javascript" src="./page_actions.js"></script>
+<script type="text/javascript" src="./prompt_funcs.js"></script>
 </body>
 </html>

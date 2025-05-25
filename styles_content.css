@@ -58,3 +58,14 @@
     align-items: center;
   }
 }
+
+#api_input {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 5px;
+  width: 50em;
+}
+
+#modelLink {
+  color: #f48fb1;
+}
