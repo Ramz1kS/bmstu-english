@@ -1,64 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles_common.css">
-    <link rel="stylesheet" href="styles_content.css">
-    <link rel="stylesheet" href="https://u-and-i.netlify.app/Components/u-and-i-v2-dark-theme.css">
-    <title>РК по английскому</title>
-</head>
-<body>
-<div class="container">
-    <div class="container__header">
-        <h1>РК по английскому</h1>
-    </div>
-    <div class="container__main">
-        <div class="contents">
-            <div class="contents__item">
-                <label class="form-label">HTML страницы с e-learning c вопросами или текстом</label>
-                <div>
-                <textarea class="form-field form-textarea" placeholder="Скопируйте сюда HTML" rows="3" id="content"></textarea>
-                </div>
-				<button class="btn btn-solid-primary" onclick="pastebuf()">Вставить из буфера</button>
-            </div>
-            <div class="contents__item">
-                <label class="form-label">Промпт</label>
-                <div>
-                <textarea class="form-field form-textarea" placeholder="Здесь будет промпт для нейросети" rows="3" id="ready" readonly></textarea>
-                </div>
-				<button class="btn btn-solid-primary" onclick="copyres()">Скопировать промпт</button>
-            </div>
-            <div class="contents__item">
-                <label class="form-label">Ответы</label>
-                <div>
-                <textarea class="form-field form-textarea" placeholder="Здесь будет ответ нейросети с правильными ответами (наверное)" rows="3" id="answers" readonly></textarea>
-                </div>
-                <button class="btn btn-solid-primary" onclick="promptAnswers()">Закинуть промпт нейросети</button>
-            </div>
-        </div>
-    </div>
-    <div id="api_input_container">
-        <p class="form-label">Введите свой API-ключ:</p>
-        <input type="text" id="api_input" size="20">
-        <p>Ключ нужен от <a id="modelLink" href="https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free" target="_blank">этой</a> модели</p>
-    </div>
-    <div class="container__footer">
-        <div>
-            <a href="https://github.com/da-fuu" target="_blank" class="link-text link-text-secondary">Автор форка и расширений</a>
-        </div>
-        <div>
-            <a href="https://github.com/Ramz1kS" target="_blank" class="link-text link-text-secondary">(и ещё один)</a>
-        </div>
-        <div>
-            <a href="https://github.com/siberianbearofficial" target="_blank" class="link-text link-text-secondary">Автор парсера и сайта</a>
-        </div>
-        <div>
-            <a href="https://t.me/addstickers/iu7_secondB" target="_blank" class="link-text link-text-secondary">От ИУ7 с любовью</a>
-        </div>
-    </div>
-</div>
-<script src="parser.js"></script>
-<script type="text/javascript" src="./page_actions.js"></script>
-<script type="text/javascript" src="./prompt_funcs.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMSTU English Language Solver</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
