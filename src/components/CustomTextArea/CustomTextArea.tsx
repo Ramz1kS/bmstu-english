@@ -25,7 +25,7 @@ export const CustomTextArea: FC<CustomTextAreaProps> = ({
       readOnly={readonly}
       cols={50} 
       rows={30}></textarea>
-      <button onClick={onClick}>{buttonName}</button>
+      {onClick ? <button onClick={onClick}>{buttonName}</button> : <></>}
     </div>
   )
 }
