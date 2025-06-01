@@ -1,6 +1,6 @@
 {
   "name": "bmstu-english",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://ramz1ks.github.io/bmstu-english/",
