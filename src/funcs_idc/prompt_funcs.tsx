@@ -1,6 +1,5 @@
 export async function promptAnswers(promptText: string): Promise<string> {
   const API_KEY = import.meta.env.VITE_API_KEY
-  console.log(API_KEY)
   try {
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
