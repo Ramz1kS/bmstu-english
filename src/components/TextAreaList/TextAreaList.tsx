@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { parseAll } from '../../funcs_idc/parser'
 import { promptAnswers } from '../../funcs_idc/prompt_funcs'
 import classes from './TextAreaList.module.css'

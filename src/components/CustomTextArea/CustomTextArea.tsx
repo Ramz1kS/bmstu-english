@@ -1,4 +1,4 @@
-import React, { type FC } from 'react'
+import { type FC } from 'react'
 import classes from './CustomTextArea.module.css'
 
 interface CustomTextAreaProps {
