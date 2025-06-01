@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Clean old build
+        run: rm -rf dist
+
       - name: Install dependencies
         run: npm install
 
