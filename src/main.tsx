@@ -3,7 +3,7 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/bmstu-english/' : '/'}>
+  <BrowserRouter basename='/bmstu-english/'>
     <App />
   </BrowserRouter>
 )
