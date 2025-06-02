@@ -41,7 +41,7 @@ jobs:
         run: npm run build
         env: 
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-      - name: Debug print (safe)
+      - name: Debug key print
         run: echo "SECRET KEY IS SET ${VITE_API_KEY:0:4}****"
         env:
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
